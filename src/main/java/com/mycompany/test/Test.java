@@ -11,17 +11,13 @@ package com.mycompany.test;
 public class Test {
 
     public static void main(String[] args) {
-//        String greeting = "Hello";
+        int likes = 2;
         
-//        int greetLength = greeting.length();;
-//        int number = 4;
-        int likes = 4;
         int dislikes = 2;
-        double total = ratio(likes, dislikes);
+        
+        double total = MathUtils.ratio(likes, dislikes);
+        
         System.out.println(total);
     }
     
-    public static double ratio(int likes, int dislikes){
-        return (double) likes / (likes + dislikes) * 100;
-    }
 }

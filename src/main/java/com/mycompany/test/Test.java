@@ -11,9 +11,9 @@ package com.mycompany.test;
 public class Test {
 
     public static void main(String[] args) {
-        int likes = 2;
+        int likes = 3425;
         
-        int dislikes = 2;
+        int dislikes = 3425;
         
         double total = MathUtils.ratio(likes, dislikes);
         

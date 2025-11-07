@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.text.NumberFormat;
-
+import java.util.Locale;
 // Note: This program requires Java 25 or newer.
 // For Java 24 or earlier, use the standard entry point:
 // public static void main(String[] args) {}
@@ -30,10 +30,10 @@ void main() {
     double mortgage = principal
             * (monthlyInterest * Math.pow(1 + monthlyInterest, totalPayments))
             / (Math.pow(1 + monthlyInterest, totalPayments) - 1);
-    System.out.println("Mortgage: $" + Math.round(mortgage));
+    System.out.println("Mortgage: " + Math.round(mortgage));
 
-    // Currency formatting
-    //    NumberFormat currency = NumberFormat.getCurrencyInstance();
-    //    String mortgageFormatted = NumberFormat.getCurrencyInstance();
-    //    System.out.println("Mortgage: " + mortgageFormatted);
+//     Currency formatting
+        NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.US);
+        String mortgageFormatted = currency.format(mortgage);
+        System.out.println("Mortgage: " + mortgageFormatted);
 }
